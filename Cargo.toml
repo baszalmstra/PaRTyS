@@ -1,0 +1,7 @@
+[package]
+authors = ["Bas Zalmstra <zalmstra.bas@gmail.com>"]
+name = "PaRTyS"
+version = "0.1.0"
+
+[dependencies]
+piston_window = "0.60.0"
