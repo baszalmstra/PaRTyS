@@ -1,17 +1,17 @@
-use player;
+use game::*;
 
-pub struct State {
-    pub players: Vec<player::Player>,
+pub struct GameState {
+    pub players: Vec<Player>,
     pub width: f32,
     pub height: f32,
 }
 
-impl State {
-    pub fn new() -> State {
-        State {
+impl GameState {
+    pub fn new() -> GameState {
+        GameState {
             players: Vec::new(),
-            width: 1920.0,
-            height: 1080.0,
+            width: 1280.0,
+            height: 800.0,
         }
     }
 }

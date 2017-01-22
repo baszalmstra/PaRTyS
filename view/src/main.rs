@@ -2,16 +2,17 @@ extern crate piston_window;
 extern crate opengl_graphics;
 extern crate cgmath;
 extern crate num_traits;
+extern crate time;
 
 use piston_window::*;
 use opengl_graphics::GlGraphics;
 
 mod app;
 mod state;
-mod player;
+mod game;
 
 fn main() {
-    let mut window: PistonWindow = WindowSettings::new("PaRTyS", [1920, 1080])
+    let mut window: PistonWindow = WindowSettings::new("PaRTyS", [1280, 800])
         .exit_on_esc(true)
         .build()
         .unwrap();
