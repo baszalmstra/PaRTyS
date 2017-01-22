@@ -23,11 +23,11 @@ impl App {
     pub fn load(&mut self) {
         // Create two players
         self.state.players.push(Player::new([1.0, 0.0, 0.0, 1.0],
-                                            Vector2::new(30.0, 30.0),
+                                            Vector2::new(30.0, 400.0),
                                             Shape::Triangle));
 
         self.state.players.push(Player::new([1.0, 1.0, 0.0, 1.0],
-                                            Vector2::new(1250.0, 770.0),
+                                            Vector2::new(1250.0, 400.0),
                                             Shape::Rectangle));
     }
 
@@ -55,7 +55,7 @@ impl App {
 
         let c: Context = self.create_context(args);
 
-        let window_background = [0.0; 4];
+        let window_background = [0.1, 0.1, 0.1, 1.0];
 
         // Start drawing the viewport
         gl.draw(args.viewport(), |_, gl| {
@@ -101,7 +101,7 @@ impl App {
         // Move goblins 
         for mut player in &mut self.state.players {
             for mut goblin in &mut player.goblins {
-                goblin.position.x += delta * 10.0;
+                goblin.position.x += delta * 30.0;
             }
         }
     }
