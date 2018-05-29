@@ -4,8 +4,9 @@ name = "PaRTyS"
 version = "0.1.0"
 
 [dependencies]
-ggez = "0.4"
-
-[dependencies.sdl2]
-version = "0.31.0"
-features = [ "bundled" ]
+piston = "0.37.0"
+piston2d-graphics = "0.26.0"
+pistoncore-glutin_window = "0.47.0"
+piston2d-opengl_graphics = "0.53.0"
+time = "0.1"
+vecmath = "0.3.1"
